@@ -13,6 +13,6 @@ And there are threaded and non-threaded test abstracts for different DB types. E
 
 With this approach, experimenting a new DB brand will be as easy as implementing a DB adapter for it, of course that implements the connection interface of its type. Also different adapters can be easily written for different client libraries or bindings of the same DB brand to be able to test the performances of client libraries. And at the same time, when a new test is written, it will be applicable to all brands in its type.
 
-In order to avoid coupling, since I didn’t use a framework supplying means to bind class types to container classes (`Dependency Injection`_), I manually inject the adapter classes to generic testing class constructors and lower layers use the connections supplied without knowing which kind of connections they are.
+In order to avoid coupling, since I didn’t use a framework supplying means to bind class types to container classes (`Dependency Injection`__), I manually inject the adapter classes to generic testing class constructors and lower layers use the connections supplied without knowing which kind of connections they are.
 
-.. _Dependency Injection: http://martinfowler.com/articles/injection.html
+.. __Dependency Injection: http://martinfowler.com/articles/injection.html
